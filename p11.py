@@ -27,6 +27,8 @@ numbers_str = """
 def solution():
     
     numbers = [int(i) for i in numbers_str.split()]
+
+    # constructing the grid of numbers
     grid = []
     for i in range(20): # rows
         row = []
