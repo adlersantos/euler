@@ -14,16 +14,12 @@ def num_to_phrase(num):
         if num % 10 == 0:
             return tens[num / 10]
         else:    
-            tens_string = tens[num / 10]
-            ones_string = ones[num % 10]
-            return tens_string + ones_string
+            return tens[num / 10] + num_to_phrase(num % 10)
     elif 100 <= num < 1000:
         if num % 100 == 0:
             return ones[num / 100] + 'hundred'
         else:
-            hundreds_string = ones[num / 100] + 'hundredand'
-            tens = num % 100
-            return hundreds_string + num_to_phrase(tens)
+            return ones[num / 100] + 'hundredand' + num_to_phrase(num % 100)
     elif num == 1000:
         return 'onethousand'
 
@@ -32,7 +28,6 @@ def solution():
 
     for i in range(1, 1001):
         numstring = num_to_phrase(i)
-        print i, numstring
         total += len(numstring)
 
     return total
