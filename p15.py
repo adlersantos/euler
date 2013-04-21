@@ -4,7 +4,7 @@ def pascal(n):
     max_level = 2*n
     pascal_triangle = [[0], [1], [1, 1]]
     for i in range(2, max_level):  
-        prev_row_length = len(pascal_triangle[i]) # = 2
+        prev_row_length = len(pascal_triangle[i])
         row = []
         for j in range(0, prev_row_length + 1):
             if j == 0:
