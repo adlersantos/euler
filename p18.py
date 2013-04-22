@@ -43,7 +43,7 @@ def solution():
     start = time.time()
 
     sub_sums = []
-    for i in range(2, num_lines + 1): # right limit must be num_lines + 1
+    for i in range(2, num_lines + 1):
         line = triangle[-i]
         if i == 2:
             prev_line = triangle[-(i-1)]
@@ -55,6 +55,6 @@ def solution():
     elapsed = time.time() - start
     elapsed_string = "found in %s seconds" % (elapsed)
 
-    return sub_sums,    elapsed_string
+    return sub_sums, elapsed_string
 
 print solution()
